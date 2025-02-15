@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student List</title>
+</head>
+<body>
+    <h2>Registered Students</h2>
+    <ul>
+        {% for student in students %}
+            <li>{{ student.name }} - {{ student.email }} - Age: {{ student.age }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'student_form' %}">Register New Student</a>
+</body>
+</html>

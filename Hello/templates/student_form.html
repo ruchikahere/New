@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+</head>
+<body>
+    <h2>Fill students details Form</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <label>{{ form.name.label }}</label>  <!-- Display the label -->
+        {{ form.name }}  <!-- Input field -->
+        {% if form.name.errors %}
+            <div style="color: red;">{{ form.name.errors }}</div>  <!-- Display errors -->
+        {% endif %}
+
+        <br>
+
+        <label>{{ form.email.label }}</label>  <!-- Display the label -->
+        {{ form.email }}  <!-- Input field -->
+        {% if form.email.errors %}
+            <div style="color: red;">{{ form.email.errors }}</div>  <!-- Display errors -->
+        {% endif %}
+
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
