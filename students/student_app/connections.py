@@ -1,11 +1,11 @@
-import pymysql 
+# import pymysql 
 
 
-conn = pymysql.connect(
-            host="localhost",
-            user="root",
-            password="ruchika1234",
-            database="employee_db"
-)
+# conn = pymysql.connect(
+#             host="localhost",
+#             user="root",
+#             password="ruchika1234",
+#             database="employee_db"
+# )
 
-cursor = conn.cursor()
+# cursor = conn.cursor()

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Profile Picture</title>
+</head>
+<body>
+    <h2>Upload your Profile Picture</h2>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
+    </form>
+    {% if profile %}
+        <h3>Uploaded Profile Picture:</h3>
+        <img src="https://www.pexels.com/search/profile%20picture/" alt="Profile Picture" width="200px">
+    {% endif %}
+</body>
+</html>
