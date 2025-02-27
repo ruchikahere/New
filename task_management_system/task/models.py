@@ -15,6 +15,14 @@ class Task(models.Model):
 
     def __str__(self):
         return self.task_name
+    
+class Task1(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=255)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.name
 
 
 # Create your models here.
